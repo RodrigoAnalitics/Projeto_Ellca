@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELLCA | Dashboard Almoxarifado</title>
+
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles_dash.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="/img/logo_ellca.png" alt="Logo ELLCA" class="logo-img">
+    </div>
+    <div class="nav-links-center">
+        <a href="/dashboard/Almoxarifado.html" class="nav-item active">ALMOXARIFADO</a>
+        <a href="/dashboard/Backoffice.html" class="nav-item">BACKOFFICE</a>
+        <a href="/dashboard/DP.html" class="nav-item">DP</a>
+        <a href="/dashboard/Frota.html" class="nav-item">FROTA</a>
+        <a href="/dashboard/Projeto.html" class="nav-item">PROJETO</a>
+        <a href="/dashboard/RH.html" class="nav-item">RH</a>
+        <a href="/dashboard/RH.html" class="nav-item">SESMT</a>
+        <a href="/dashboard/TI.html" class="nav-item">TI</a>
+    </div>
+
+        <div class="back-btn">
+            <a href="/index.html">VOLTAR <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        </div>
+
+    </nav>
+
+    <!-- CONTAINER -->
+    <div class="container">
+
+        <!-- SLIDER -->
+        <div class="slide">
+
+            <!-- SLIDE ALMOXARIFADO -->
+            <div class="item active"
+                style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWxtb3hhcmlmYWRvfGVufDB8fDB8fHww');">
+
+                <div class="split-screen">
+
+                    <!-- TEXTO -->
+                    <div class="text-section">
+                        <div class="topic">GESTÃO DE MATERIAIS</div>
+
+                        <h1 class="title">
+                            ALMOXA<span>RIFADO</span><br>
+                          
+                        </h1>
+
+                        <p class="des">
+                            Controle avançado de materiais elétricos utilizados em redes de distribuição,
+                            garantindo disponibilidade, rastreabilidade e conformidade operacional.
+                            <br><br>
+                            Gestão eficiente de estoque, redução de perdas e suporte contínuo às operações
+                            de campo.
+                        </p>
+                    </div>
+
+                    <!-- CARDS -->
+                    <div class="cards-section">
+                        <div class="cards-wrapper">
+
+                            <!-- CARD 1 -->
+                            <div class="glass-card">
+                                <div class="badge">ESTOQUE <i class="fa-solid fa-boxes-stacked"></i></div>
+                                <div class="img-box"
+                                    style="background-image: url('https://plus.unsplash.com/premium_photo-1681426710520-7c56c9f563d2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YWxtb3hhcmlmYWRvfGVufDB8fDB8fHww');">
+                                </div>
+                                <h3>ESTOQUE DE MATERIAIS</h3>
+                                <div class="kpi-mini">
+                                    <span><i class="fa-solid fa-bolt"></i> Materiais</span>
+                                    <span><i class="fa-solid fa-chart-line"></i> Controle Ativo</span>
+                                </div>
+                                <div class="actions">
+                                    <button class="btn-primary">ACESSAR <i class="fa-solid fa-lock"></i></i></button>
+                                    <button class="btn-glass" title="Acompanhe a quantidade em estoque de material que está dentro do almoxarifado.">DETALHES</button>
+                                </div>
+                            </div>
+
+                            <!-- CARD 2 -->
+                            <div class="glass-card">
+                                <div class="badge gold">ENTRADA | SAÍDA <i class="fa-solid fa-arrow-down"></i></div>
+                                <div class="img-box"
+                                    style="background-image: url('https://media.istockphoto.com/id/2212563380/pt/foto/yellow-hard-hat-protective-glasses-and-earmuffs-in-industrial-setting.webp?a=1&b=1&s=612x612&w=0&k=20&c=2mHxO0VUY4tO3Tn_CmA2Up0QMe_0APZEPT_pLRx5SP8=');">
+                                </div>
+                                <h3>ESTOQUE EPI/EPC</h3>
+                                <div class="kpi-mini">
+                                    <span><i class="fa-solid fa-industry"></i> Fluxo</span>
+                                    <span><i class="fa-solid fa-calendar"></i> Registro Diário</span>
+                                </div>
+                                <div class="actions">
+                                    <button class="btn-primary"><a href="https://lookerstudio.google.com/u/0/reporting/4b7c0acb-cc34-4ca8-b97b-214087f992b5/page/p_5daci7g4sd" target="_blank">ACESSAR </a> <i class="fa-solid fa-rocket"></i></button>
+                                    <button class="btn-glass" title = "Acompanhe o fluxo de saida de EPI/EPC junto com a quantidade em estoque de cada material.">DETALHES</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CONTROLES -->
+        <div class="controls">
+            <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="/js_dash.js"></script>
+
+</body>
+
+</html>

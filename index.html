@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELLCA | PAINEL DE CONTROLE</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles_index.css">
+</head>
+
+<body>
+
+    <!-- ======================= VERSÃO COMPUTADOR ======================= -->
+    <div class="desktop-view">
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/logo_ellca.png" alt="Logo ELLCA" class="logo-img">
+            </div>
+
+            <div class="nav-status">
+                <span class="pulse-dot"></span>
+                <span class="status-text">REDES ONLINE • 12ms</span>
+            </div>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="cardSearch" placeholder="Pesquisar módulo...">
+            </div>
+
+            <div class="nav-links">
+                <a href="#" class="nav-item active"> HOME <i class="fa-solid fa-house-user"></i></a>
+                <a href="dashboard.html" class="nav-item">DASHBOARD <i class="fa-solid fa-chart-pie"></i> </a>
+                <a href="planilha.html" class="nav-item">PLANILHAS <i class="fa-solid fa-file-excel"></i></a>
+                
+                <button class="grid-toggle-btn" title="Alternar visualização em Grade">
+                    <i class="fa-solid fa-table-cells"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- CONTAINER PRINCIPAL -->
+        <div class="container">
+            <div class="slide">
+                <div class="item active"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                    url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=2070');">
+
+                    <div class="split-screen">
+
+                        <!-- TEXTO -->
+                        <div class="text-section">
+                            <div class="topic">CENTRAL DE CONTROLE</div>
+
+                            <h1 class="title">
+                                GESTÃO & <br>
+                                <span>PERFORMANCE</span>
+                            </h1>
+
+                            <p class="des">
+                                Escolha como deseja visualizar seus resultados. 
+                                Acesse dashboards dinâmicos para uma análise visual rápida 
+                                ou utilize nossas planilhas inteligentes para um controle detalhado de dados.
+                                <br><br>
+                                Tudo o que você precisa para gerenciar seus processos em um só lugar.
+                            </p>
+                        </div>
+
+                        <!-- CARROSSEL 3D -->
+                        <div class="cards-section">
+                            <div class="cards-wrapper">
+
+                                <!-- CARD 1 -->
+                                <div class="glass-card" data-index="0" data-title="dashboards bi">
+                                    <div class="badge">BI <i class="fa-solid fa-chart-simple"></i></div>
+                                    <div class="img-box" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=60');"></div>
+                                    <h3>DASHBOARDS</h3>
+                                    <p class="card-desc">Análise em tempo real de infraestrutura e performance de rede.</p>
+                                    <div class="kpi-mini">
+                                        <span class="kpi-success"><i class="fa-solid fa-arrow-up"></i> +18%</span>
+                                        <span><i class="fa-solid fa-chart-line"></i> Mensal</span>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="btn-primary"><a href="dashboard.html"> ACESSAR <i class="fa-solid fa-rocket"></i></a></button>
+                                        <button class="btn-glass">DETALHES</button>
+                                    </div>
+                                </div>
+
+                                <!-- CARD 2 -->
+                                <div class="glass-card" data-index="1" data-title="base de dados planilha">
+                                    <div class="badge gold">PLANILHA <i class="fa-regular fa-file-excel"></i></div>
+                                    <div class="img-box" style="background-image: url('https://images.unsplash.com/photo-1658203897339-0b8c64a42fba?w=500&auto=format&fit=crop&q=60');"></div>
+                                    <h3>BASE DE DADOS</h3>
+                                    <p class="card-desc">Controle unificado e planilhas inteligentes para auditoria.</p>
+                                    <div class="kpi-mini">
+                                        <span class="kpi-success"><i class="fa-solid fa-check-circle"></i> 92%</span>
+                                        <span><i class="fa-solid fa-calendar"></i> Período</span>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="btn-primary"><a href="planilha.html"> ACESSAR <i class="fa-solid fa-lock"></i></a></button>
+                                        <button class="btn-glass">DETALHES</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- CARD 3 -->
+                                <div class="glass-card" data-index="2" data-title="documentos docs">
+                                    <div class="badge gold">CONTROLE <i class="fa-regular fa-clipboard"></i></div>
+                                    <div class="img-box" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&auto=format&fit=crop&q=60');"></div>
+                                    <h3>GERENCIA</h3>
+                                    <p class="card-desc">Repositório de arquivos oficiais, manuais e inspeções técnicas.</p>
+                                    <div class="kpi-mini">
+                                        <span class="kpi-warning"><i class="fa-solid fa-triangle-exclamation"></i> Pendente</span>
+                                        <span><i class="fa-solid fa-calendar"></i> Período</span>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="btn-primary"><a href="https://datastudio.google.com/u/0/reporting/4b7c0acb-cc34-4ca8-b97b-214087f992b5/page/p_7j6wdmil3d"> ACESSAR <i class="fa-solid fa-rocket"></i></a></button>
+                                        <button class="btn-glass">DETALHES</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- CARD 4 -->
+                                <div class="glass-card" data-index="3" data-title="equipe organograma">
+                                    <div class="badge gold">EQUIPE <i class="fa-solid fa-people-group"></i></div>
+                                    <div class="img-box" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop&q=60');"></div>
+                                    <h3>ORGANOGRAMA</h3>
+                                    <p class="card-desc">Estrutura organizacional, setores e contatos de suporte interno.</p>
+                                    <div class="kpi-mini">
+                                        <span class="kpi-success"><i class="fa-solid fa-check-circle"></i> Ativo</span>
+                                        <span><i class="fa-solid fa-calendar"></i> Período</span>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="btn-primary"><a href="#"> ACESSAR <i class="fa-solid fa-lock"></i></a></button>
+                                        <button class="btn-glass">DETALHES</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTROLES & PAGINAÇÃO -->
+            <div class="controls-container">
+                <div class="controls">
+                    <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="pagination-dots"></div>
+            </div>
+
+            <!-- RODAPÉ COM TOOLTIP DE SUPORTE -->
+            <footer class="footer-bar">
+                <div class="footer-info">
+                    <span><i class="fa-solid fa-shield-halved"></i> Sistema ELLCA <strong>v2.4.0</strong></span>
+                    <span class="separator">•</span>
+                    <span>Dominio: <strong>Rodrigo Lopes</strong></span>
+                </div>
+                <div class="footer-actions">
+                    <button class="footer-btn" title="Rodrio.lopes@ellca2.com.br" onclick="alert('E-mail de suporte: Rodrio.lopes@ellca2.com.br')">
+                        <i class="fa-solid fa-headset"></i> Suporte
+                    </button>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- ======================= FIM VERSÃO COMPUTADOR ======================= -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>
