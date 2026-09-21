@@ -21,6 +21,10 @@ body {
     color: #fff; 
     overflow: hidden; 
     height: 100vh;
+    /* Força renderização nítida de fontes em telas menores/mobile */
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 a { 
@@ -243,7 +247,7 @@ a {
 }
 
 .des { 
-    font-size: 15px; 
+    font-size: 17px; 
     color: #a0aec0; 
     line-height: 1.7; 
     max-width: 575px;
@@ -259,6 +263,7 @@ a {
     align-items: center; 
     justify-content: center; 
     overflow: visible; 
+    margin-top: -60px; /* Sobe toda a seção dos cards */
 }
 
 .cards-wrapper { 
@@ -321,6 +326,10 @@ a {
     justify-content: space-between !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
     overflow: hidden !important;
+    /* Remove o embaçado também no modo grade mobile para garantir 100% de nitidez */
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: linear-gradient(135deg, rgba(5, 9, 20, 0.95) 0%, rgba(5, 9, 20, 0.8) 100%) !important;
 }
 
 .cards-wrapper.grid-mode .img-box {
@@ -384,10 +393,11 @@ a {
     position: absolute; 
     top: 0; 
     left: 0; 
-    width: 320px; 
-    height: 400px;
+    width: 370px; 
+    height: 455px;
     background: var(--glass); 
     backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     border: 1px solid var(--glass-border-light); 
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     border-radius: 24px; 
@@ -399,6 +409,11 @@ a {
     overflow: hidden;
     transform: scale(0.9); 
     filter: brightness(0.7);
+
+    /* Regras ANTI-BLUR / Hardware Acceleration (Essencial para telas menores) */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 
 /* ===================== CARD ATIVO (EFEITO HOLLYWOOD ESTÁTICO) ===================== */
@@ -412,6 +427,11 @@ a {
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9), 
                 0 0 50px rgba(0, 212, 255, 0.6), 
                 0 0 35px rgba(0, 212, 255, 0.3) inset !important;
+                
+    /* Remoção total do embaçamento e solidificação de fundo para nitidez absoluta */
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: linear-gradient(135deg, rgba(5, 9, 20, 0.95) 0%, rgba(5, 9, 20, 0.8) 100%) !important;
 }
 
 .glass-card.card-front:hover { 
@@ -424,7 +444,7 @@ a {
 
 /* O EFEITO NEON DO TÍTULO PRINCIPAL PASSADO PARA O TÍTULO DO CARD ATIVO */
 .glass-card.card-front h3 {
-    font-size: 18px !important; 
+    font-size: 22px !important; 
     margin-bottom: 3px !important;
     margin-top: 12px !important;
     display: inline-block;
@@ -440,27 +460,27 @@ a {
 
 /* Ajustes de Gap / Espaçamento (Corrigidos) */
 .glass-card.card-front .card-desc { 
-    font-size: 12px !important; 
+    font-size: 14px !important; 
     margin-bottom: 15px !important; 
 }
 
 .glass-card.card-front .img-box { 
-    height: 180px !important; 
+    height: 190px !important; 
     margin-bottom: 3px !important; 
 }
 
 .glass-card.card-front .actions { 
-    gap: 12px !important; 
+    gap: 16px !important; 
 }
 
 .glass-card.card-front .btn-primary { 
-    font-size: 10px !important; 
+    font-size: 12px !important; 
     padding: 10px !important; 
     margin-top: 10px !important; 
 }
 
 .glass-card.card-front .btn-glass { 
-    font-size: 10px !important; 
+    font-size: 12px !important; 
     padding: 10px !important; 
 }
 
@@ -476,14 +496,14 @@ a {
     transform: translateX(280px) translateZ(-100px) scale(0.80) rotateY(-0deg); 
     opacity: 0.70; 
     z-index: 5; 
-    filter: blur(3px); 
+    filter: blur(2px); /* Reduzido levemente para evitar que vaze para o card central no mobile */
 }
 
 .glass-card.card-back-left { 
     transform: translateX(-280px) translateZ(-100px) scale(0.80) rotateY(0deg); 
     opacity: 0.70; 
     z-index: 5; 
-    filter: blur(3px); 
+    filter: blur(2px);
 }
 
 .glass-card.card-hidden { 
@@ -500,7 +520,7 @@ a {
 /* ===================== Elementos Internos Base ===================== */
 .img-box { 
     width: 100%; 
-    height: 100%; 
+    height: 160px; 
     border-radius: 14px; 
     background-size: cover; 
     background-position: center; 
@@ -529,7 +549,7 @@ a {
 }
 
 .glass-card h3 { 
-    font-size: 14px; 
+    font-size: 16px; 
     font-weight: 700; 
     margin-bottom: 8px; 
     color: #fff; 
@@ -580,7 +600,7 @@ a {
 .actions { 
     display: flex; 
     flex-direction: column; 
-    gap: 10px; 
+    gap: 12px; 
     margin-top: auto; 
 }
 
@@ -728,31 +748,6 @@ a {
     border-color: var(--primary); 
 }
 
-@media (max-width: 1100px) {
-    .split-screen { 
-        grid-template-columns: 1fr; 
-        padding-top: 100px; 
-        text-align: center; 
-    }
-    
-    .cards-section { 
-        justify-content: center; 
-        padding-right: 0; 
-        padding-bottom: 80px; 
-    }
-    
-    .controls-container { 
-        left: 50%; 
-        transform: translateX(-50%); 
-        bottom: 20px; 
-        flex-direction: column; 
-    }
-    
-    .footer-bar { 
-        display: none; 
-    }
-}
-
 /* ===================== Ajustes Estruturais da Navbar (Desktop) ===================== */
 .nav-content {
     display: flex;
@@ -835,9 +830,35 @@ a {
     }
 
     .nav-item {
-        font-size: 12px; /* Aumentado para facilitar o toque */
+        font-size: 14px; /* Aumentado para facilitar o toque */
         width: 100%;
         text-align: center;
         padding: 15px 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .split-screen { 
+        grid-template-columns: 1fr; 
+        padding-top: 100px; 
+        text-align: center; 
+    }
+    
+    .cards-section { 
+        justify-content: center; 
+        padding-right: 0; 
+        padding-bottom: 80px; 
+        margin-top: 0; /* Reseta o margin no mobile para não cortar os cards */
+    }
+    
+    .controls-container { 
+        left: 50%; 
+        transform: translateX(-50%); 
+        bottom: 20px; 
+        flex-direction: column; 
+    }
+    
+    .footer-bar { 
+        display: none; 
     }
 }
